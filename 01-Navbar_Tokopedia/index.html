@@ -3,53 +3,390 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Navbar Tokopedia - Ngulik Navbar</title>
+    <title>Tokopedia Clone | Pixel Perfect</title>
 
-    <!-- Link ke File CSS Lokal -->
+    <!-- Google Fonts: Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css" />
-
-    <!-- Feather Icons (CDN untuk kebutuhan ikon search & cart) -->
-    <script src="https://unpkg.com/feather-icons"></script>
   </head>
 
   <body>
-    <header class="tokopedia-header">
-      <nav class="navbar-main">
-        <!-- 1. Logo Tokopedia -->
+    <!-- ==========================================================================
+   TOP BAR SECTION (PROMO CAPPER & NAVIGATION LINKS)
+   ========================================================================== -->
+    <header class="main-header">
+      <!-- ==========================================================================
+         MAIN NAVBAR SECTION (LOGO, CATEGORY, SEARCH, CART, & AUTH)
+         ========================================================================== -->
+      <div class="main-navbar">
+        <!-- Tokopedia Brand Logo -->
         <a href="#" class="brand-logo">
-          <img src="assets/images/tokopedia-logo.svg" alt="Tokopedia" />
+          <img src="https://assets.tokopedia.net/assets-tokopedia-lite/v2/zeus/production/e5b8438b.svg" alt="Tokopedia" />
         </a>
 
-        <!-- 2. Tombol Kategori -->
-        <button class="btn-kategori">Kategori</button>
+        <!-- Category Dropdown Container -->
+        <div class="category-container" id="catContainer">
+          <div class="category-trigger">
+            <span class="category-text">Kategori</span>
+          </div>
 
-        <!-- 3. Form / Search Bar -->
-        <div class="search-container">
-          <i data-feather="search" class="icon-search"></i>
-          <input type="text" placeholder="Cari di Tokopedia" autocomplete="off" />
+          <!-- Full-Width Category Mega Menu -->
+          <div class="category-dropdown" id="catDropdown">
+            <!-- Top Category Tabs -->
+            <div class="cat-tabs">
+              <span class="active-tab">Belanja</span>
+              <span>Featured</span>
+              <span>Kebutuhan Harian</span>
+              <span>Tagihan</span>
+              <span>Top-Up</span>
+              <span>Tokopedia Keuangan</span>
+              <span>Pajak & Pendidikan</span>
+              <span>Halal Corner</span>
+              <span>Lain - Lain</span>
+            </div>
+
+            <!-- Category Body Content -->
+            <div class="cat-content">
+              <!-- Left Column: Category Sidebar List -->
+              <div class="cat-sidebar">
+                <div class="sidebar-item active" data-target="panel-virtual">Virtual Products</div>
+                <div class="sidebar-item" data-target="panel-rumah-tangga">Rumah Tangga</div>
+                <div class="sidebar-item">Audio, Kamera & Elektronik Lainnya</div>
+                <div class="sidebar-item">Buku</div>
+                <div class="sidebar-item">Dapur</div>
+                <div class="sidebar-item">Elektronik</div>
+                <div class="sidebar-item">Fashion Anak & Bayi</div>
+                <div class="sidebar-item">Fashion Muslim</div>
+                <div class="sidebar-item">Fashion Pria</div>
+                <div class="sidebar-item">Fashion Wanita</div>
+                <div class="sidebar-item">Film & Musik</div>
+              </div>
+
+              <!-- Right Column: Sub-category Detail Panels -->
+              <div class="cat-detail">
+                <!-- 1. Virtual Products Panel -->
+                <div class="cat-panel active" id="panel-virtual">
+                  <div class="category-content-header">
+                    <svg class="content-title-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#31353b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                      <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                      <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                    <h2>Virtual Products</h2>
+                  </div>
+
+                  <div class="detail-item">
+                    <div class="detail-title">Voucher</div>
+                    <div class="detail-link">Discount and Shipping Coupon</div>
+                  </div>
+                </div>
+
+                <!-- 2. Rumah Tangga Panel -->
+                <div class="cat-panel" id="panel-rumah-tangga">
+                  <div class="category-content-header">
+                    <svg class="content-title-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#31353b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"></path>
+                      <path d="M3 11v5a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"></path>
+                      <path d="M5 18v2"></path>
+                      <path d="M19 18v2"></path>
+                    </svg>
+                    <h2>Rumah Tangga</h2>
+                  </div>
+
+                  <div class="category-grid">
+                    <!-- Column 1: Dekorasi -->
+                    <div class="category-column">
+                      <div class="sub-category-group">
+                        <h3 class="sub-category-title">Dekorasi</h3>
+                        <ul class="sub-category-list">
+                          <li><a href="#">Cover Kipas Angin</a></li>
+                          <li><a href="#">Cover Kursi</a></li>
+                          <li><a href="#">Hiasan Dinding</a></li>
+                          <li><a href="#">Hiasan Natal</a></li>
+                          <li><a href="#">Jam Dinding</a></li>
+                          <li><a href="#">Jam Meja</a></li>
+                          <li><a href="#">Keset</a></li>
+                          <li><a href="#">Lampu Pohon Natal</a></li>
+                          <li><a href="#">Lilin</a></li>
+                          <li><a href="#">Lilin Aroma Terapi</a></li>
+                          <li><a href="#">Lukisan</a></li>
+                          <li><a href="#">Patung</a></li>
+                          <li><a href="#">Pohon Natal</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- Column 2: Kamar Mandi -->
+                    <div class="category-column">
+                      <div class="sub-category-group">
+                        <h3 class="sub-category-title">Kamar Mandi</h3>
+                        <ul class="sub-category-list">
+                          <li><a href="#">Cermin Kamar Mandi</a></li>
+                          <li><a href="#">Dispenser Odol</a></li>
+                          <li><a href="#">Ember & Baskom</a></li>
+                          <li><a href="#">Gantungan Handuk</a></li>
+                          <li><a href="#">Gayung</a></li>
+                          <li><a href="#">Handuk Mandi</a></li>
+                          <li><a href="#">Keset Anti Slip</a></li>
+                          <li><a href="#">Kimono Mandi</a></li>
+                          <li><a href="#">Rak Toilet</a></li>
+                          <li><a href="#">Shower Curtain</a></li>
+                          <li><a href="#">Tempat Sabun</a></li>
+                          <li><a href="#">Tempat Sikat Gigi</a></li>
+                          <li><a href="#">Toilet Cover</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- Column 3: Kebutuhan Rumah & Laundry -->
+                    <div class="category-column">
+                      <div class="sub-category-group">
+                        <h3 class="sub-category-title">Kebutuhan Rumah</h3>
+                        <ul class="sub-category-list">
+                          <li><a href="#">Baterai</a></li>
+                          <li><a href="#">Baterai Jam</a></li>
+                          <li><a href="#">Humidifier</a></li>
+                          <li><a href="#">Payung</a></li>
+                          <li><a href="#">Pembatas Ruangan</a></li>
+                          <li><a href="#">Penahan Pintu</a></li>
+                          <li><a href="#">Termometer Ruangan</a></li>
+                        </ul>
+                      </div>
+                      <div class="sub-category-group">
+                        <h3 class="sub-category-title">Laundry</h3>
+                        <ul class="sub-category-list">
+                          <li><a href="#">Alat Pelipat Baju</a></li>
+                          <li><a href="#">Bola Pencuci Baju</a></li>
+                          <li><a href="#">Cover Mesin Cuci</a></li>
+                          <li><a href="#">Gantungan Baju</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- Column 4: Tempat Penyimpanan -->
+                    <div class="category-column">
+                      <div class="sub-category-group">
+                        <h3 class="sub-category-title">Tempat Penyimpanan</h3>
+                        <ul class="sub-category-list">
+                          <li><a href="#">Botol</a></li>
+                          <li><a href="#">Brankas</a></li>
+                          <li><a href="#">Keranjang</a></li>
+                          <li><a href="#">Kotak</a></li>
+                          <li><a href="#">Kotak Baterai</a></li>
+                          <li><a href="#">Kotak Jam</a></li>
+                          <li><a href="#">Kotak Karton</a></li>
+                          <li><a href="#">Kotak Surat</a></li>
+                          <li><a href="#">Laci</a></li>
+                          <li><a href="#">Lainnya</a></li>
+                          <li><a href="#">Stand Hanger</a></li>
+                          <li><a href="#">Storage Box Multifungsi</a></li>
+                          <li><a href="#">Tempat Obat</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- 4. Area Keranjang & Akses Akun -->
-        <div class="nav-right">
-          <a href="#" class="btn-cart" title="Keranjang">
-            <i data-feather="shopping-cart"></i>
-          </a>
+        <!-- Search Bar Section -->
+        <div class="search-container" id="searchContainer">
+          <div class="search-wrapper">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9fa6b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" class="search-input" id="searchInput" placeholder="Cari di Tokopedia" autocomplete="off" />
+          </div>
+
+          <!-- Search History Dropdown -->
+          <div class="search-dropdown">
+            <ul class="search-list">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8d96a6" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+                <span>minyak sunco 2 liter</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8d96a6" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+                <span>minyak goreng 2l</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8d96a6" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+                <span>tolak angin 1 box isi 12</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8d96a6" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+                <span>Camille Beauty Ofc</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8d96a6" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+                <span>SYB</span>
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8d96a6" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+                <span>kemocheng microfiber</span>
+              </li>
+            </ul>
+
+            <!-- Search Dropdown Footer -->
+            <div class="search-tips-footer">
+              <div class="tips-left">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#31353b" stroke-width="1.8">
+                  <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 3.5z"></path>
+                </svg>
+                <span>Tips & Trik Pencarian</span>
+              </div>
+              <a href="#" class="tips-link">Pelajari</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side Actions (Cart & Auth) -->
+        <div class="right-actions">
+          <!-- Cart Dropdown -->
+          <div class="cart-container">
+            <div class="cart-trigger">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+            </div>
+
+            <div class="cart-dropdown">
+              <div class="cart-empty-state">
+                <svg class="cart-empty-icon" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M45 55L52 95H88L95 55H45Z" fill="#FFC72C" />
+                  <path d="M40 55H100L95 43H45L40 55Z" fill="#F4B41A" />
+                  <path d="M54 65L59 85M86 65L81 85M70 65V85" stroke="#E09F00" stroke-width="2.5" stroke-linecap="round" />
+                  <path d="M50 43C50 28 90 28 90 43" stroke="#03AC0E" stroke-width="4" stroke-linecap="round" />
+                  <path d="M102 35C102 39.4183 98.4183 43 94 43C98.4183 43 102 46.5817 102 51C102 46.5817 105.582 43 110 43C105.582 43 102 39.4183 102 35Z" fill="#FFD84D" />
+                  <path d="M38 65C38 67.2091 36.2091 69 34 69C36.2091 69 38 70.7909 38 73C38 70.7909 39.7909 69 42 69C39.7909 69 38 67.2091 38 65Z" fill="#FFD84D" />
+                </svg>
+                <div class="cart-empty-title">Wah, keranjang belanjamu kosong</div>
+                <div class="cart-empty-subtitle">Yuk, isi dengan barang-barang impianmu!</div>
+                <button class="cart-start-shopping-btn">Mulai Belanja</button>
+              </div>
+            </div>
+          </div>
 
           <div class="vertical-divider"></div>
 
-          <button class="btn-masuk">Masuk</button>
-          <button class="btn-daftar">Daftar</button>
+          <!-- Auth Buttons -->
+          <div class="auth-buttons">
+            <button class="btn-masuk">Masuk</button>
+            <button class="btn-daftar">Daftar</button>
+          </div>
         </div>
-      </nav>
+      </div>
+
+      <!-- ==========================================================================
+         SUB-NAVBAR SECTION (LOCATION SELECTION BAR)
+         ========================================================================== -->
+      <div class="sub-navbar">
+        <div class="location-wrapper">
+          <svg class="pin-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#31353b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Dikirim ke <strong>Jakarta Pusat</strong></span>
+          <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#31353b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+      </div>
     </header>
-    <!-- 5. Baris Bawah: Informasi Lokasi Pengiriman -->
-    <div class="navbar-bottom">
-      <div class="location-wrapper">
-        <i data-feather="map-pin" class="icon-location"></i>
-        <span>Dikirim ke <strong>Jakarta Pusat</strong></span>
-        <i data-feather="chevron-down" class="icon-chevron"></i>
+
+    <!-- ==========================================================================
+       MODAL POPUP LOCATION SELECTION
+       ========================================================================== -->
+    <div id="locationModal" class="modal-overlay">
+      <div class="modal-container">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h3>Mau kirim belanjaan kemana?</h3>
+          <p>Biar pengalaman belanjamu lebih baik, pilih alamat dulu.</p>
+          <button class="modal-close-btn" id="closeLocationModal">&times;</button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <!-- Auth Prompt Box -->
+          <div class="modal-login-box">
+            <div class="modal-login-text">
+              <strong>Masuk</strong>
+              <p>Masuk dulu biar bisa memilih alamat kirimanmu</p>
+            </div>
+            <button class="modal-btn-masuk">Masuk</button>
+          </div>
+
+          <!-- Manual Location Input -->
+          <div class="modal-divider-text">Mau pakai cara lain?</div>
+          <div class="modal-search-container">
+            <div class="modal-search-box" id="searchBoxWrapper">
+              <svg class="modal-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6c727c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" placeholder="Pilih kota atau kecamatan" class="modal-location-input" id="locationInput" />
+              <button class="modal-btn-gunakan" id="btnGunakan" disabled>Gunakan</button>
+            </div>
+
+            <!-- Popular Cities Dropdown -->
+            <div class="location-dropdown" id="locationDropdown">
+              <div class="dropdown-gps-option">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#31353b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M12 2v2m0 16v2M2 12h2m16 0h2"></path>
+                </svg>
+                <span>Gunakan Lokasi Saat Ini</span>
+              </div>
+
+              <div class="popular-cities-section">
+                <span class="popular-title">Kota Populer</span>
+                <div class="city-chips-grid">
+                  <button class="city-chip">Jakarta</button>
+                  <button class="city-chip">Bekasi</button>
+                  <button class="city-chip">Tangerang</button>
+                  <button class="city-chip">Tangerang Selatan</button>
+                  <button class="city-chip">Bandung</button>
+                  <button class="city-chip">Depok</button>
+                  <button class="city-chip">Bogor</button>
+                  <button class="city-chip">Semarang</button>
+                  <button class="city-chip">Medan</button>
+                  <button class="city-chip">Malang</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <!-- akhir navbar -->
 
     <script>
       feather.replace();
