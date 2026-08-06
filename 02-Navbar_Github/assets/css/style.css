@@ -1,0 +1,21 @@
+/* 1. VARIABEL WARNA GITHUB DARK MODE */
+:root {
+  --gh-bg: #0d1117; /* Background header utama */
+  --gh-border: #30363d; /* Warna garis tepi/border */
+  --gh-text: #f0f6fc; /* Warna teks putih utama */
+  --gh-text-muted: #8d96a0; /* Warna teks abu-abu/placeholder */
+  --gh-btn-hover: #21262d; /* Warna background saat tombol di-hover */
+}
+
+/* 2. CSS RESET DASAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #010409;
+  color: var(--gh-text);
+}
