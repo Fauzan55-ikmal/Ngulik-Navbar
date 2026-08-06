@@ -1,3 +1,4 @@
+/* 1. Reset CSS & Variables */
 /* Reset CSS */
 * {
   margin: 0;
@@ -20,6 +21,7 @@ body {
   background-color: #ffffff;
 }
 
+/* 2. Main Layout & Header Container */
 /* Container Utama Header */
 .tokopedia-header {
   width: 100%;
@@ -63,4 +65,40 @@ body {
 .btn-kategori:hover {
   background-color: #f3f4f6;
   color: var(--tp-green);
+}
+
+/* 4. Flexible Search Bar */
+/* Search Box Container */
+.search-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--tp-gray-border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  background-color: #ffffff;
+  transition: border-color 0.2s;
+}
+
+.search-container:focus-within {
+  border-color: var(--tp-green);
+}
+
+.icon-search {
+  width: 18px;
+  height: 18px;
+  color: var(--tp-gray-text);
+  margin-right: 10px;
+}
+
+.search-container input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  color: var(--tp-dark-text);
+}
+
+.search-container input::placeholder {
+  color: #9fa6b0;
 }
