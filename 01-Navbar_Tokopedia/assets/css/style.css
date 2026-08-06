@@ -33,19 +33,26 @@ body {
   padding: 10px 32px 6px 32px;
 }
 
-/* Baris Atas Navbar */
+/* Pastikan container navbar mengambil lebar penuh dengan pembatas rapi */
 .navbar-main {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 24px; /* Jarak antar elemen utama */
 }
 
-/* 3. Logo & Category Styling */
-/* Logo */
+/* Ukuran pasti untuk wrapper logo */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0; /* Biar logo nggak tertekan/gepeng saat layar mengecil */
+}
+
 .brand-logo img {
-  height: 32px;
+  width: 145px; /* Lebar standar logo Tokopedia */
+  height: auto;
   display: block;
 }
 
