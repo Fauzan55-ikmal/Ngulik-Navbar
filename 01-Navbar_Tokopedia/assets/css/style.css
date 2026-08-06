@@ -1,0 +1,21 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Variable Warna Tokopedia */
+:root {
+  --tp-green: #03ac0e;
+  --tp-green-hover: #028a0b;
+  --tp-green-light: #e8f5e9;
+  --tp-gray-border: #e5e7eb;
+  --tp-gray-text: #6c727c;
+  --tp-dark-text: #212121;
+}
+
+body {
+  background-color: #ffffff;
+}
