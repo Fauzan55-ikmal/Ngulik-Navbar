@@ -1,0 +1,38 @@
+Navbar (kependekan dari Navigation Bar) adalah area atau panel navigasi yang biasanya terletak di bagian paling atas halaman web atau aplikasi.
+Fungsi utamanya sederhana: kompas utama buat pengguna supaya mereka nggak nyasar dan bisa berpindah antar halaman/fitur dengan cepat.
+
+Anatomy & Komponen Utama Navbar
+Sebuah navbar yang ideal biasanya terdiri dari beberapa elemen penting:
+1. Brand / Logo: Terletak di sebelah kiri. Berfungsi sebagai identitas situs dan biasanya punya link balik ke halaman Home (Beranda).
+2. Nav Links: Kumpulan tautan ke halaman utama (contoh: Home, About, Services, Contact).
+3. Call to Action (CTA): Tombol aksi utama untuk memancing pengguna (contoh: Login, Register, Get Started, Try Free).
+4. Search Bar / Utilities: Fitur pencarian cepat, ikon keranjang belanja, atau toggle dark mode.
+5. Hamburger Menu (Mobile): Ikon garis tiga ($\equiv$) yang muncul di layar HP untuk menyembunyikan/menampilkan menu agar hemat tempat.
+
+Jenis-Jenis Layout Navbar Populer
+Berikut beberapa struktur visual navbar yang sering digunakan dalam desain modern:
+Jenis Navbar    Karakteristik Utama     Cocok Untuk
+    Standard / Static	
+    Menempel di paling atas halaman, ikut hilang saat di-scroll ke bawah.	Blog sederhana, situs berita, web portofolio.
+
+    Sticky / Fixed Top	
+    Tetap melayang/nempel di atas layar meskipun halaman di-scroll jauh ke bawah.	
+    Web SaaS, E-commerce, Landing Page produk.
+
+    Floating Navbar	
+    Memiliki jarak (margin) dari tepi layar, bentuknya seperti pulau melayang.	
+    Desain modern/minimalis, startup tech.
+
+    Sidebar / Vertical	
+    Berada di posisi kiri atau kanan layar secara vertikal dari atas ke bawah.	
+    Dashboard admin, web aplikasi kompleks (misal: Notion, Spotify).
+
+    Glassmorphism	T
+    ransparan dengan efek buram (blur/backdrop-filter) di bagian belakangnya.	
+    Design trend kekinian, portfolio modern.
+
+Best Practices (Kunci Navbar yang Bagus):
+1. Keep it Clean: Jangan masukkan terlalu banyak link. Maksimal 5–7 menu utama agar pengguna tidak bingung.
+2. Visual Hierarchy: Buat tombol CTA paling menonjol (misal: tombol Register pakai warna beda/kontras).
+3. Responsive First: Wajib nyaman diakses di layar HP maupun monitor desktop.
+4. Active State: Berikan penanda visual (seperti garis bawah atau warna beda) pada menu halaman yang sedang dibuka pengguna.
