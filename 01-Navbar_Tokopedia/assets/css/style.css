@@ -47,12 +47,13 @@ body {
 .brand-logo {
   display: flex;
   align-items: center;
-  flex-shrink: 0; /* Biar logo nggak tertekan/gepeng saat layar mengecil */
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
-.brand-logo img {
-  width: 145px; /* Lebar standar logo Tokopedia */
-  height: auto;
+.brand-logo svg {
+  height: 32px;
+  width: auto;
   display: block;
 }
 
