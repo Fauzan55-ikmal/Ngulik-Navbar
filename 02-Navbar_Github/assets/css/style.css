@@ -26,7 +26,7 @@ body {
   display: flex;
   justify-content: space-between; /* Dorong sisi kiri dan kanan ke ujung */
   align-items: center; /* Ratakan semua elemen secara vertikal */
-  padding: 12px 24px; /* Tambah padding atas-bawah & kiri-kanan */
+  padding: 8px 12px; /* Turunin padding kiri-kanan dari 16px/20px jadi 12px */
   background-color: var(--gh-bg #0d1117);
   border-bottom: 1px solid var(--gh-border);
   height: 48px;
