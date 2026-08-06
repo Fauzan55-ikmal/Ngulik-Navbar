@@ -1,7 +1,7 @@
 /* 1. VARIABEL WARNA GITHUB DARK MODE */
 :root {
-  --gh-bg: #0d1117; /* Background header utama */
-  --gh-border: #30363d; /* Warna garis tepi/border */
+  --gh-bg: #0d1117; /* Warna header asli GitHub (dark gray) */
+  --gh-border: #21262d; /* Warna border tipis bawah */
   --gh-text: #f0f6fc; /* Warna teks putih utama */
   --gh-text-muted: #8d96a0; /* Warna teks abu-abu/placeholder */
   --gh-btn-hover: #21262d; /* Warna background saat tombol di-hover */
@@ -16,7 +16,7 @@
 }
 
 body {
-  background-color: #010409;
+  background-color: #010409; /* Background halaman bawahnya yang hitam pekat */
   color: var(--gh-text);
 }
 
@@ -26,7 +26,7 @@ body {
   justify-content: space-between; /* Dorong sisi kiri dan kanan ke ujung */
   align-items: center; /* Ratakan semua elemen secara vertikal */
   padding: 12px 24px; /* Tambah padding atas-bawah & kiri-kanan */
-  background-color: var(--gh-header-bg, #0d1117);
+  background-color: var(--gh-bg #0d1117);
   border-bottom: 1px solid var(--gh-border);
   height: 48px;
   min-height: 64px; /* Tinggikan container agar bernapas */
