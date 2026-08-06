@@ -19,3 +19,23 @@
 body {
   background-color: #ffffff;
 }
+
+/* Container Utama Header */
+.tokopedia-header {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--tp-gray-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 10px 32px 6px 32px;
+}
+
+/* Baris Atas Navbar */
+.navbar-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
