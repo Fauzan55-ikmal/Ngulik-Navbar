@@ -36,3 +36,41 @@ Best Practices (Kunci Navbar yang Bagus):
 2. Visual Hierarchy: Buat tombol CTA paling menonjol (misal: tombol Register pakai warna beda/kontras).
 3. Responsive First: Wajib nyaman diakses di layar HP maupun monitor desktop.
 4. Active State: Berikan penanda visual (seperti garis bawah atau warna beda) pada menu halaman yang sedang dibuka pengguna.
+
+
+
+
+
+
+
+Rekomendasi website dengan navbar simpel dan estetis yang cocok untuk diulik:
+
+Stripe (stripe.com)
+
+Alasan: Memiliki layout navigasi yang sangat bersih, modern, dan minimalis.
+
+Hal yang menarik diulik: Efek hover responsif pada menu navigasi, tombol CTA (Call to Action) yang kontras, dan transisi dropdown yang sangat halus.
+
+GitHub (github.com)
+
+Alasan: Struktur navigasinya lugas dan langsung pada pokok fungsi tanpa layout yang tumpuk-menumpuk.
+
+Hal yang menarik diulik: Search bar bertipe expanding (membesar saat di-fokus), tombol aksi ikon di sebelah kanan, dan pembagian menu yang ringkas.
+
+Dev.to (dev.to)
+
+Alasan: Didesain khusus untuk developer, sehingga struktur DOM dan CSS-nya sangat clean dan mudah dibedah lewat Inspect Element.
+
+Hal yang menarik diulik: Search input simpel di tengah, tombol Create Post di kanan, serta penataan logo yang presisi.
+
+Medium (medium.com)
+
+Alasan: Sangat cocok jika ingin melatih layouting flexbox murni dengan interaksi dasar.
+
+Hal yang menarik diulik: Perubahan gaya header saat di-scroll (sticky navbar) dan penataan tautan navigasi horizontal yang rapi.
+
+Vercel (vercel.com)
+
+Alasan: Mengusung konsep dark mode minimalis dengan gaya developer-first UI.
+
+Hal yang menarik diulik: Efek hover tab indicator yang berpindah-pindah antar menu dan struktur sub-navbar dua baris yang simpel.
