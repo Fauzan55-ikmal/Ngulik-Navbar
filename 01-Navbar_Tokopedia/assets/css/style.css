@@ -102,3 +102,74 @@ body {
 .search-container input::placeholder {
   color: #9fa6b0;
 }
+
+/* 5. Cart, Separator, & Action Buttons */
+/* Area Kanan */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Tombol Keranjang */
+.btn-cart {
+  color: var(--tp-dark-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.btn-cart:hover {
+  background-color: #f3f4f6;
+}
+
+.btn-cart svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Garis Pembatas Vertikal */
+.vertical-divider {
+  width: 1px;
+  height: 24px;
+  background-color: var(--tp-gray-border);
+}
+
+/* Tombol Masuk & Daftar */
+.btn-masuk {
+  background-color: transparent;
+  border: 1px solid var(--tp-green);
+  color: var(--tp-green);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 7px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-masuk:hover {
+  background-color: var(--tp-green-light);
+}
+
+.btn-daftar {
+  background-color: var(--tp-green);
+  border: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-daftar:hover {
+  background-color: var(--tp-green-hover);
+}
+
+/*  */
