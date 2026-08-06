@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. RESET & VARIABLES (STANDARD TOKOPEDIA DESIGN SYSTEM)
-   ========================================================================== */
+/* 1. RESET & VARIABLES (STANDARD TOKOPEDIA DESIGN SYSTEM) */
 
 :root {
   /* Branding Colors */
@@ -41,13 +39,10 @@ body {
   background-color: var(--bg-white);
 }
 
-/* ==========================================================================
-   MAIN NAVBAR, SUB-BAR, DROPDOWN & MODAL LOKASI
-   ========================================================================== */
+/* MAIN NAVBAR, SUB-BAR, DROPDOWN & MODAL LOKASI
+ */
 
-/* --------------------------------------------------------------------------
-   1. MAIN NAVBAR CONTAINER
-   -------------------------------------------------------------------------- */
+/* 1. MAIN NAVBAR CONTAINER */
 .main-header {
   position: relative;
   border-bottom: none;
@@ -75,9 +70,7 @@ body {
   width: auto;
 }
 
-/* --------------------------------------------------------------------------
-   2. CATEGORY TRIGGER & DROPDOWN (FULL WIDTH / POPUP)
-   -------------------------------------------------------------------------- */
+/* 2. CATEGORY TRIGGER & DROPDOWN (FULL WIDTH / POPUP) */
 .category-container {
   position: relative; /* Disesuaikan agar dropdown punya jangkar yang jelas */
 }
@@ -244,9 +237,7 @@ body {
   color: var(--tokoped-green);
 }
 
-/* --------------------------------------------------------------------------
-   3. SEARCH BAR & DROPDOWN PENCARIAN
-   -------------------------------------------------------------------------- */
+/* 3. SEARCH BAR & DROPDOWN PENCARIAN */
 .search-container {
   position: relative;
   flex: 1;
@@ -352,9 +343,7 @@ body {
   text-decoration: none;
 }
 
-/* --------------------------------------------------------------------------
-   4. RIGHT ACTIONS (CART & AUTH BUTTONS)
-   -------------------------------------------------------------------------- */
+/* 4. RIGHT ACTIONS (CART & AUTH BUTTONS) */
 .right-actions {
   display: flex;
   align-items: center;
@@ -486,9 +475,7 @@ body {
   background: var(--tokoped-green-hover);
 }
 
-/* --------------------------------------------------------------------------
-   5. SUB-BAR LOKASI (ALIGNED TO RIGHT)
-   -------------------------------------------------------------------------- */
+/* 5. SUB-BAR LOKASI (ALIGNED TO RIGHT) */
 .sub-navbar {
   display: flex;
   justify-content: flex-end;
@@ -514,9 +501,7 @@ body {
   font-weight: 700;
 }
 
-/* --------------------------------------------------------------------------
-   6. STYLING MODAL POPUP LOKASI
-   -------------------------------------------------------------------------- */
+/* 6. STYLING MODAL POPUP LOKASI */
 .modal-overlay {
   display: none;
   position: fixed;
