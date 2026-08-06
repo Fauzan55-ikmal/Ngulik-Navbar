@@ -47,3 +47,25 @@ Sebuah navbar yang ideal umumnya terdiri dari beberapa elemen penting:
 - [ ] Implementasi Navbar Sticky dengan efek perubah latar belakang saat di-_scroll_
 - [ ] Implementasi Responsive Hamburger Menu (Mobile)
 - [ ] Implementasi Floating Glassmorphism Navbar
+
+# 🧭 Ngulik Navbar
+
+Repositori latihan untuk membedah, mendesain, dan mengimplementasikan berbagai jenis Navigation Bar (Navbar) populer secara modular.
+
+---
+
+## 📁 Struktur Folder Proyek
+
+```text
+Ngulik-Navbar/
+├── 01-Navbar_Tokopedia/
+│   ├── assets/
+│   │   ├── css/
+│   │   ├── js/
+│   │   ├── images/
+│   │   └── docs/
+│   └── index.html
+├── .gitignore
+├── idea.txt
+└── README.md
+```
