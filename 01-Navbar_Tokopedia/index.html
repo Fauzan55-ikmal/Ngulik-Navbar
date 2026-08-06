@@ -11,5 +11,50 @@
     <!-- Feather Icons (CDN untuk kebutuhan ikon search & cart) -->
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
-  <body></body>
+
+  <body>
+    <header class="tokopedia-header">
+      <nav class="navbar-main">
+        <!-- 1. Logo Tokopedia -->
+        <a href="#" class="brand-logo">
+          <img src="assets/images/tokopedia-logo.svg" alt="Tokopedia" />
+        </a>
+
+        <!-- 2. Tombol Kategori -->
+        <button class="btn-kategori">Kategori</button>
+
+        <!-- 3. Form / Search Bar -->
+        <div class="search-container">
+          <i data-feather="search" class="icon-search"></i>
+          <input type="text" placeholder="Cari di Tokopedia" autocomplete="off" />
+        </div>
+
+        <!-- 4. Area Keranjang & Akses Akun -->
+        <div class="nav-right">
+          <a href="#" class="btn-cart" title="Keranjang">
+            <i data-feather="shopping-cart"></i>
+          </a>
+
+          <div class="vertical-divider"></div>
+
+          <button class="btn-masuk">Masuk</button>
+          <button class="btn-daftar">Daftar</button>
+        </div>
+      </nav>
+
+      <!-- 5. Baris Bawah: Informasi Lokasi Pengiriman -->
+      <div class="navbar-bottom">
+        <div class="location-wrapper">
+          <i data-feather="map-pin" class="icon-location"></i>
+          <span>Dikirim ke <strong>Jakarta Pusat</strong></span>
+          <i data-feather="chevron-down" class="icon-chevron"></i>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      feather.replace();
+    </script>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
