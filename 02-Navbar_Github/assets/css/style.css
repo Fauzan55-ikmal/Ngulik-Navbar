@@ -1,14 +1,18 @@
-/* 1. VARIABEL WARNA GITHUB DARK MODE */
+/* ==========================================================================
+   1. VARIABLES & COLOR THEME
+   ========================================================================== */
 :root {
-  --gh-bg: #0d1117; /* Warna header asli GitHub (dark gray) */
-  --gh-border: #21262d; /* Warna border tipis bawah */
-  --gh-text: #f0f6fc; /* Warna teks putih utama */
-  --gh-text-muted: #8d96a0; /* Warna teks abu-abu/placeholder */
-  --gh-btn-bg: #21262d40; /* Transparan halus untuk background tombol */
-  --gh-btn-hover: #21262d; /* Warna background saat tombol di-hover */
+  --gh-bg: #0d1117; /* Header background (GitHub dark gray) */
+  --gh-border: #21262d; /* Thin bottom border */
+  --gh-text: #f0f6fc; /* Primary white text */
+  --gh-text-muted: #8d96a0; /* Muted gray text/placeholder */
+  --gh-btn-bg: #21262d40; /* Subtle transparent button background */
+  --gh-btn-hover: #21262d; /* Button hover background */
 }
 
-/* 2. CSS RESET DASAR */
+/* ==========================================================================
+   2. BASE RESET
+   ========================================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -17,38 +21,43 @@
 }
 
 body {
-  background-color: #010409; /* Background halaman bawahnya yang hitam pekat */
+  background-color: #010409; /* Deep black page background */
   color: var(--gh-text);
 }
 
-/* 3. LAYOUT UTAMA HEADER */
+/* ==========================================================================
+   3. HEADER & LAYOUT CONTAINERS
+   ========================================================================== */
 .gh-header {
   display: flex;
-  justify-content: space-between; /* Dorong sisi kiri dan kanan ke ujung */
-  align-items: center; /* Ratakan semua elemen secara vertikal */
-  padding: 8px 12px; /* Turunin padding kiri-kanan dari 16px/20px jadi 12px */
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
   background-color: var(--gh-bg #0d1117);
   border-bottom: 1px solid var(--gh-border);
   height: 48px;
-  min-height: 64px; /* Tinggikan container agar bernapas */
+  min-height: 64px;
 }
 
 .gh-nav-left,
 .gh-nav-right {
   display: flex;
   align-items: center;
-  gap: 8px; /* Jarak sejajar antar elemen di dalam wadah */
+  gap: 8px; /* Spacing between inner nav elements */
 }
 
-/* 4. STYLING SISI KIRI */
+/* ==========================================================================
+   4. LEFT NAV COMPONENTS
+   ========================================================================== */
+/* Icon Buttons (General) */
 .gh-btn-icon {
   background-color: var(--gh-btn-bg);
   border: 1px solid var(--gh-border);
   color: var(--gh-text-muted);
-  width: 36px; /* Bikin kotak presisi 1:1 */
+  width: 36px;
   height: 36px;
   padding: 0;
-  border-radius: 8px; /* Sudut melengkung pas khas GitHub */
+  border-radius: 8px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -57,16 +66,23 @@ body {
   transition: all 0.2s ease;
 }
 
-/* Pembesaran SVG Ikon Hamburger agar garisnya tebal & pas */
 .gh-btn-icon svg {
   width: 20px;
   height: 20px;
-  stroke-width: 2; /* Mempertebal garis ikon */
+  stroke-width: 2;
 }
 
 .gh-btn-icon:hover {
   background-color: var(--gh-btn-hover);
   border-color: var(--gh-text-muted);
+  color: var(--gh-text);
+}
+
+/* Logo Link & Title */
+.gh-logo-link {
+  position: relative;
+  display: flex;
+  align-items: center;
   color: var(--gh-text);
 }
 
@@ -84,7 +100,7 @@ body {
   margin-left: 4px;
 }
 
-/* Dashboard Context Hover Button */
+/* Dashboard Context Button */
 .gh-dashboard-btn {
   background: transparent;
   border: none;
@@ -101,7 +117,75 @@ body {
   background-color: var(--gh-btn-hover);
 }
 
-/* Tooltip Universal GitHub (Menggunakan Pseudo-element ::after/::before) */
+/* ==========================================================================
+   5. RIGHT NAV & SEARCH BAR
+   ========================================================================== */
+/* Search Bar Component */
+.gh-search-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.gh-search-btn {
+  background: transparent;
+  border: 1px solid var(--gh-border);
+  color: var(--gh-text-muted);
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  transition: border-color 0.2s ease;
+}
+
+.gh-search-btn:hover {
+  border-color: #8b949e;
+}
+
+.gh-search-btn kbd {
+  background-color: var(--gh-btn-hover);
+  border: 1px solid var(--gh-border);
+  border-radius: 4px;
+  padding: 0 4px;
+  font-size: 0.75rem;
+  color: var(--gh-text-muted);
+  font-family: inherit;
+}
+
+/* Utilities: Caret & Divider */
+.gh-divider {
+  width: 1px;
+  height: 16px;
+  background-color: var(--gh-border);
+  margin: 0 2px;
+}
+
+.gh-caret {
+  font-size: 0.65rem;
+  margin-left: 4px;
+  color: var(--gh-text-muted);
+}
+
+/* Profile Avatar */
+.gh-avatar-link {
+  display: flex;
+  align-items: center;
+}
+
+.gh-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--gh-border);
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   6. TOOLTIP SYSTEM
+   ========================================================================== */
+/* Universal Attribute Tooltip */
 [data-tooltip],
 [data-tooltip-html] {
   position: relative;
@@ -136,15 +220,7 @@ body {
   visibility: visible;
 }
 
-/* Container Logo Link */
-.gh-logo-link {
-  position: relative;
-  display: flex;
-  align-items: center;
-  color: var(--gh-text);
-}
-
-/* Tooltip Khusus Logo dengan Badge <kbd> */
+/* Custom Tooltip Element (Logo) */
 .gh-logo-link .gh-tooltip {
   position: absolute;
   top: 100%;
@@ -171,7 +247,6 @@ body {
   gap: 4px;
 }
 
-/* Styling Badge Key <kbd> */
 .gh-logo-link .gh-tooltip kbd {
   background-color: #373e47;
   border: 1px solid #444c56;
@@ -184,72 +259,7 @@ body {
   line-height: 1;
 }
 
-/* Trigger Hover Popup */
 .gh-logo-link:hover .gh-tooltip {
   opacity: 1;
   visibility: visible;
-}
-
-/* 5. STYLING SISI KANAN & SEARCH BAR */
-.gh-search-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.gh-search-btn {
-  background: transparent;
-  border: 1px solid var(--gh-border);
-  color: var(--gh-text-muted);
-  padding: 5px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.8125rem;
-  transition: border-color 0.2s ease;
-}
-
-.gh-search-btn:hover {
-  border-color: #8b949e;
-}
-
-/* Styling badge shortcut keyboard <kbd> */
-.gh-search-btn kbd {
-  background-color: var(--gh-btn-hover);
-  border: 1px solid var(--gh-border);
-  border-radius: 4px;
-  padding: 0 4px;
-  font-size: 0.75rem;
-  color: var(--gh-text-muted);
-  font-family: inherit;
-}
-
-/* Styling Avatar Profil */
-.gh-avatar-link {
-  display: flex;
-  align-items: center;
-}
-
-.gh-avatar {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  border: 1px solid var(--gh-border);
-  object-fit: cover;
-}
-
-/* Styling Garis Pemisah Tipis */
-.gh-divider {
-  width: 1px;
-  height: 16px;
-  background-color: var(--gh-border);
-  margin: 0 2px;
-}
-
-/* Styling Panah Kecil Dropdown (Caret) */
-.gh-caret {
-  font-size: 0.65rem;
-  margin-left: 4px;
-  color: var(--gh-text-muted);
 }
