@@ -69,3 +69,52 @@ body {
   color: var(--gh-text);
   margin-left: 4px;
 }
+
+/* 5. STYLING SISI KANAN & SEARCH BAR */
+.gh-search-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.gh-search-btn {
+  background: transparent;
+  border: 1px solid var(--gh-border);
+  color: var(--gh-text-muted);
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  transition: border-color 0.2s ease;
+}
+
+.gh-search-btn:hover {
+  border-color: #8b949e;
+}
+
+/* Styling badge shortcut keyboard <kbd> */
+.gh-search-btn kbd {
+  background-color: var(--gh-btn-hover);
+  border: 1px solid var(--gh-border);
+  border-radius: 4px;
+  padding: 0 4px;
+  font-size: 0.75rem;
+  color: var(--gh-text-muted);
+  font-family: inherit;
+}
+
+/* Styling Avatar Profil */
+.gh-avatar-link {
+  display: flex;
+  align-items: center;
+}
+
+.gh-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--gh-border);
+  object-fit: cover;
+}
