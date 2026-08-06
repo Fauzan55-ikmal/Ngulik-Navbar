@@ -37,3 +37,35 @@ body {
   align-items: center;
   gap: 8px; /* Jarak sejajar antar elemen di dalam wadah */
 }
+
+/* 4. STYLING SISI KIRI */
+.gh-btn-icon {
+  background: transparent;
+  border: 1px solid var(--gh-border);
+  color: var(--gh-text);
+  padding: 5px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.gh-btn-icon:hover {
+  background-color: var(--gh-btn-hover);
+}
+
+.gh-logo {
+  color: var(--gh-text);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.gh-title {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--gh-text);
+  margin-left: 4px;
+}
