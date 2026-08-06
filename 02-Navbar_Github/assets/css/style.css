@@ -118,3 +118,18 @@ body {
   border: 1px solid var(--gh-border);
   object-fit: cover;
 }
+
+/* Styling Garis Pemisah Tipis */
+.gh-divider {
+  width: 1px;
+  height: 16px;
+  background-color: var(--gh-border);
+  margin: 0 2px;
+}
+
+/* Styling Panah Kecil Dropdown (Caret) */
+.gh-caret {
+  font-size: 0.65rem;
+  margin-left: 4px;
+  color: var(--gh-text-muted);
+}
