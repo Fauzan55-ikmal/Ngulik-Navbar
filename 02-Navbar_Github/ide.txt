@@ -1,0 +1,27 @@
+Roadmap Pengerjaan Navbar GitHub
+
+Fase 1: HTML Structure (Fondasi)
+
+Tahap 1: Setup Head & Linking Assets (CSS & JS) — [DONE]
+
+Tahap 2: Wadah Utama <header> & Pembagian Dua Sisi (Kiri & Kanan)
+
+Tahap 3: Komponen Sisi Kiri (Hamburger Button, Logo SVG, Text Dashboard)
+
+Tahap 4: Komponen Sisi Kanan (Search Bar Input, Action Buttons, Profil Avatar)
+
+Fase 2: CSS Styling (Tampilan & Layout)
+
+Tahap 5: CSS Reset & Setup Variable Warna (Dark Mode GitHub)
+
+Tahap 6: Layouting Utama dengan Flexbox (justify-content: space-between)
+
+Tahap 7: Styling Sisi Kiri (Hover effect, spacing, alignment)
+
+Tahap 8: Styling Sisi Kanan & Search Bar Komposit (Efek focus & shortcut Type / to search)
+
+Fase 3: JavaScript Interaction (Fungsionalitas)
+
+Tahap 9: Interaksi Hamburger Menu (Sidebar Toggle)
+
+Tahap 10: Interaksi Keyboard Shortcut (Tekan / langsung fokus ke Search Bar)
