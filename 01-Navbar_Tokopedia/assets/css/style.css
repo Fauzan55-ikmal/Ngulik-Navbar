@@ -39,3 +39,28 @@ body {
   align-items: center;
   gap: 20px;
 }
+
+/* 3. Logo & Category Styling */
+/* Logo */
+.brand-logo img {
+  height: 32px;
+  display: block;
+}
+
+/* Kategori */
+.btn-kategori {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--tp-dark-text);
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.btn-kategori:hover {
+  background-color: #f3f4f6;
+  color: var(--tp-green);
+}
