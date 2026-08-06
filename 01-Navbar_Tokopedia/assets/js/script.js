@@ -1,10 +1,4 @@
-/* ==========================================================================
-   TOKOPEDIA CLONE - MAIN JAVASCRIPT
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   1. DROPDOWN KATEGORI HEADER (HOVER INTERACTION)
-   -------------------------------------------------------------------------- */
+/* 1. DROPDOWN KATEGORI HEADER (HOVER INTERACTION) */
 const catContainer = document.getElementById("catContainer");
 const catDropdown = document.getElementById("catDropdown");
 let closeTimer;
@@ -39,9 +33,7 @@ if (catContainer && catDropdown) {
   });
 }
 
-/* --------------------------------------------------------------------------
-   2. SWITCHER MENU SIDEBAR KATEGORI (DROPDOWN CONTENT)
-   -------------------------------------------------------------------------- */
+/* 2. SWITCHER MENU SIDEBAR KATEGORI (DROPDOWN CONTENT) */
 const sidebarItems = document.querySelectorAll(".cat-sidebar .sidebar-item");
 const catPanels = document.querySelectorAll(".cat-panel");
 
@@ -63,9 +55,7 @@ sidebarItems.forEach((item) => {
   });
 });
 
-/* --------------------------------------------------------------------------
-   3. DROPDOWN KERANJANG (CART)
-   -------------------------------------------------------------------------- */
+/* 3. DROPDOWN KERANJANG (CART) */
 const cartContainer = document.querySelector(".cart-container");
 const cartTrigger = document.querySelector(".cart-trigger");
 const cartDropdown = document.querySelector(".cart-dropdown");
@@ -85,9 +75,7 @@ if (cartTrigger && cartDropdown) {
   });
 }
 
-/* --------------------------------------------------------------------------
-   4. DROPDOWN & INPUT SEARCH BAR
-   -------------------------------------------------------------------------- */
+/* 4. DROPDOWN & INPUT SEARCH BAR */
 const searchContainer = document.getElementById("searchContainer");
 const searchInput = document.getElementById("searchInput");
 
@@ -105,9 +93,7 @@ if (searchInput && searchContainer) {
   });
 }
 
-/* --------------------------------------------------------------------------
-   5. MODAL & DROPDOWN LOKASI
-   -------------------------------------------------------------------------- */
+/* 5. MODAL & DROPDOWN LOKASI */
 const locationWrapper = document.querySelector(".location-wrapper");
 const locationModal = document.getElementById("locationModal");
 const closeLocationModal = document.getElementById("closeLocationModal");
