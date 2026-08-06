@@ -136,12 +136,58 @@ body {
   visibility: visible;
 }
 
-/* Tooltip Custom Keyboard Badge (<kbd>) */
+/* Container Logo Link */
 .gh-logo-link {
+  position: relative;
   display: flex;
   align-items: center;
   color: var(--gh-text);
-  text-decoration: none;
+}
+
+/* Tooltip Khusus Logo dengan Badge <kbd> */
+.gh-logo-link .gh-tooltip {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+  padding: 5px 8px;
+  background-color: #2d333b;
+  color: var(--gh-text);
+  font-size: 12px;
+  white-space: nowrap;
+  border-radius: 6px;
+  border: 1px solid var(--gh-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.15s ease,
+    visibility 0.15s ease;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Styling Badge Key <kbd> */
+.gh-logo-link .gh-tooltip kbd {
+  background-color: #373e47;
+  border: 1px solid #444c56;
+  border-radius: 4px;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+  color: var(--gh-text);
+  font-family: inherit;
+  font-size: 11px;
+  padding: 1px 4px;
+  line-height: 1;
+}
+
+/* Trigger Hover Popup */
+.gh-logo-link:hover .gh-tooltip {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* 5. STYLING SISI KANAN & SEARCH BAR */
