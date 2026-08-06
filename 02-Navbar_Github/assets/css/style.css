@@ -84,6 +84,66 @@ body {
   margin-left: 4px;
 }
 
+/* Dashboard Context Hover Button */
+.gh-dashboard-btn {
+  background: transparent;
+  border: none;
+  color: var(--gh-text);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.gh-dashboard-btn:hover {
+  background-color: var(--gh-btn-hover);
+}
+
+/* Tooltip Universal GitHub (Menggunakan Pseudo-element ::after/::before) */
+[data-tooltip],
+[data-tooltip-html] {
+  position: relative;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+  padding: 5px 8px;
+  background-color: #2d333b;
+  color: var(--gh-text);
+  font-size: 12px;
+  white-space: nowrap;
+  border-radius: 6px;
+  border: 1px solid var(--gh-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.15s ease,
+    visibility 0.15s ease;
+  z-index: 100;
+}
+
+[data-tooltip]:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Tooltip Custom Keyboard Badge (<kbd>) */
+.gh-logo-link {
+  display: flex;
+  align-items: center;
+  color: var(--gh-text);
+  text-decoration: none;
+}
+
 /* 5. STYLING SISI KANAN & SEARCH BAR */
 .gh-search-wrapper {
   display: flex;
