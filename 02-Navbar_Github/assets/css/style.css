@@ -19,3 +19,21 @@ body {
   background-color: #010409;
   color: var(--gh-text);
 }
+
+/* 3. LAYOUT UTAMA HEADER */
+.gh-header {
+  display: flex;
+  justify-content: space-between; /* Dorong sisi kiri dan kanan ke ujung */
+  align-items: center; /* Ratakan semua elemen secara vertikal */
+  padding: 8px 16px;
+  background-color: var(--gh-header-bg, #0d1117);
+  border-bottom: 1px solid var(--gh-border);
+  height: 48px;
+}
+
+.gh-nav-left,
+.gh-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Jarak sejajar antar elemen di dalam wadah */
+}
