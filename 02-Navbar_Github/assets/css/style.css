@@ -4,6 +4,7 @@
   --gh-border: #21262d; /* Warna border tipis bawah */
   --gh-text: #f0f6fc; /* Warna teks putih utama */
   --gh-text-muted: #8d96a0; /* Warna teks abu-abu/placeholder */
+  --gh-btn-bg: #21262d40; /* Transparan halus untuk background tombol */
   --gh-btn-hover: #21262d; /* Warna background saat tombol di-hover */
 }
 
@@ -41,20 +42,32 @@ body {
 
 /* 4. STYLING SISI KIRI */
 .gh-btn-icon {
-  background: transparent;
+  background-color: var(--gh-btn-bg);
   border: 1px solid var(--gh-border);
-  color: var(--gh-text);
-  padding: 5px 8px;
-  border-radius: 6px;
+  color: var(--gh-text-muted);
+  width: 36px; /* Bikin kotak presisi 1:1 */
+  height: 36px;
+  padding: 0;
+  border-radius: 8px; /* Sudut melengkung pas khas GitHub */
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+/* Pembesaran SVG Ikon Hamburger agar garisnya tebal & pas */
+.gh-btn-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2; /* Mempertebal garis ikon */
 }
 
 .gh-btn-icon:hover {
   background-color: var(--gh-btn-hover);
+  border-color: var(--gh-text-muted);
+  color: var(--gh-text);
 }
 
 .gh-logo {
